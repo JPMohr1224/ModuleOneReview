@@ -6,6 +6,8 @@ class Program
     {
         CircleArea();  //call a method
         TriangleArea();     // call Triangle method
+        RectangleArea();
+
        
         
     }
@@ -25,6 +27,21 @@ class Program
 
     }
 
+    public static void RectangleArea()   //  define attribute, return, and name of method 
+    {
+        Console.WriteLine("To calculate the area of a rectangle we need two things, the length of the base and the height of the rectangle.\nWhat is the base in cm?");
+
+        double base1 = double.Parse(Console.ReadLine());                                         //input base value, convert to double
+
+        Console.WriteLine("Now enter the value of the recangle's height in cm.");
+
+        double height1 = double.Parse(Console.ReadLine());                                       // initialize and declare height, get input
+
+        double rectArea = base1 * height1;                // calculate with varriables
+
+        Console.WriteLine($"A Rectangle with a base of {base1} and a height of {height1} has an area of {rectArea}sq/cm.");             // result
+    }
+
     public static void TriangleArea()   //  define attribute, return, and name of method (Area of Triangle = (Base X Height) / 2)
     {
         Console.WriteLine("To calculate the area of a triangle we need two things, the length of the base and the height of the triangle.\nWhat is the base in cm?");
@@ -39,7 +56,5 @@ class Program
 
         Console.WriteLine($"A Triangle with a base of {base1} and a height of {height1} has an area of {triArea}sq/cm.");             // result
     }
-
- 
 }
 
