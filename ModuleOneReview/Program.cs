@@ -4,16 +4,45 @@ class Program
 {
     static void Main(string[] args)
     {
-        CircleArea();  //call a method
-        TriangleArea();     // call Triangle method
-        RectangleArea();
-        SquareArea();
+        ChooseAShape();
+        ShapeIs();
+        
 
        
-        
     }
 
-    public static void CircleArea()  // define attribute, return, and name of method
+    
+
+    public static char ChooseAShape()
+        {
+        Console.WriteLine("What type of shape would you like to know the area of? Enter the letter\nA for a circle\nB for a triangle\nC for a rectangle or\nD for a square");
+        char choice = char.Parse(Console.ReadLine());
+        return choice;
+        }
+
+    public static void ShapeIs(char choice)
+        {
+        if (choice == 'A')
+        {
+            CircleArea();  //call a method
+        }
+        else if (choice == 'B')
+        {
+            TriangleArea();     // call Triangle method
+        }
+        else if (choice == 'C')
+        {
+            RectangleArea();
+        }
+        else
+        {
+            SquareArea();
+        }
+    }
+
+     
+
+public static void CircleArea()  // define attribute, return, and name of method
     {
         Console.WriteLine("To calculate the area of a circle we need two things, the value if Pi and the radius of the circle.\n Pi is equal to 3.14 here. What is the radius in cm?");
 
@@ -68,5 +97,5 @@ class Program
 
         Console.WriteLine($"A square with a length of {length1} has an area of {SqArea}sq/cm.");             // result
     }
-}
 
+}
