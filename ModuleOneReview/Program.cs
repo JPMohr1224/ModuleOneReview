@@ -5,41 +5,41 @@ class Program
     static void Main(string[] args)
     {
         ChooseAShape();
-        ShapeIs();
+        //ShapeIs();        //Calling the ShapeIs method, wont pass choice from return thru
         
 
        
     }
 
-    
 
-    public static char ChooseAShape()
-        {
+
+    public static void ChooseAShape()
+    {
         Console.WriteLine("What type of shape would you like to know the area of? Enter the letter\nA for a circle\nB for a triangle\nC for a rectangle or\nD for a square");
         char choice = char.Parse(Console.ReadLine());
-        return choice;
-        }
+        //return choice;
 
-    public static void ShapeIs(char choice)
+
+        static void ShapeIs(char choice)
         {
-        if (choice == 'A')
-        {
-            CircleArea();  //call a method
-        }
-        else if (choice == 'B')
-        {
-            TriangleArea();     // call Triangle method
-        }
-        else if (choice == 'C')
-        {
-            RectangleArea();
-        }
-        else
-        {
-            SquareArea();
+            if (choice == 'A')
+            {
+                CircleArea();  //call a method
+            }
+            else if (choice == 'B')
+            {
+                TriangleArea();     // call Triangle method
+            }
+            else if (choice == 'C')
+            {
+                RectangleArea();
+            }
+            else
+            {
+                SquareArea();
+            }
         }
     }
-
      
 
 public static void CircleArea()  // define attribute, return, and name of method
